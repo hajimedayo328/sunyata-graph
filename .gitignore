@@ -1,0 +1,31 @@
+# --- 秘密情報（publicリポジトリなので絶対にコミットしない） ---
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials*.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- データ（巨大ファイルは別管理。必要なら個別に許可） ---
+data/raw/
+*.parquet
+*.sqlite
+
+# --- OS / エディタ ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

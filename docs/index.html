@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>sunyata-graph — 空・縁起・無我を数学で視る</title>
+<meta name="description" content="仏教の空・縁起・無我を、グラフ理論と圏論で可視化・形式化する研究プロジェクト。" />
+<style>
+  :root {
+    --paper:  oklch(1.0 0 0);
+    --ink:    oklch(0.20 0.005 240);
+    --subtle: oklch(0.95 0.005 240);
+    --accent: oklch(0.55 0.15 250);
+    --muted:  oklch(0.55 0.01 240);
+    --line:   oklch(0.90 0.005 240);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.75;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+  header { padding: 16vh 0 10vh; }
+  .kicker {
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); font-weight: 400; margin-bottom: 28px;
+  }
+  h1 {
+    font-size: clamp(34px, 6vw, 58px); font-weight: 500;
+    letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 28px;
+  }
+  .lead { font-size: clamp(17px, 2.4vw, 21px); color: var(--muted); max-width: 60ch; }
+
+  section { padding: 7vh 0; border-top: 1px solid var(--line); }
+  h2 {
+    font-size: 14px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); font-weight: 500; margin-bottom: 36px;
+  }
+
+  .thesis { font-size: clamp(20px, 3vw, 28px); font-weight: 400; letter-spacing: -0.01em; line-height: 1.5; }
+  .thesis em { font-style: normal; color: var(--accent); }
+
+  .cards { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; }
+  .card { background: var(--paper); padding: 26px 28px; }
+  .card h3 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+  .card p { font-size: 15px; color: var(--muted); }
+  .card .status {
+    display: inline-block; margin-top: 14px; font-size: 12px; letter-spacing: 0.06em;
+    color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 3px 12px;
+  }
+
+  ul.refs { list-style: none; }
+  ul.refs li { padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  ul.refs li:last-child { border-bottom: none; }
+  ul.refs a { color: var(--accent); text-decoration: none; }
+  ul.refs a:hover { text-decoration: underline; }
+  ul.refs .who { color: var(--muted); }
+
+  footer { padding: 8vh 0 12vh; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="kicker">空 · 縁起 · 無我 × グラフ理論 · 圏論</div>
+      <h1>関係が先、実体は後。<br>それを数学で視る。</h1>
+      <p class="lead">仏教の存在論を、データ可視化と数学的形式化の両面から扱う研究プロジェクト。理論で止まっている既存研究に、可視化と実装で踏み込む。</p>
+    </header>
+
+    <section>
+      <h2>中心テーゼ</h2>
+      <p class="thesis">圏論の<em>米田の補題</em>——「対象はその外部との関係の総体で決まる」——は、龍樹の<em>無我</em>、すなわち「自性なき相互依存」と構造的に重なる。</p>
+    </section>
+
+    <section>
+      <h2>着手候補（空白地帯）</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>十二縁起の因果DAG</h3>
+          <p>無明 → … → 老死 を有向グラフ化し、do-calculus で「ある支を断つと何が消えるか」を介入シミュレート。</p>
+          <span class="status">未着手</span>
+        </div>
+        <div class="card">
+          <h3>華厳「事事無礙法界」</h3>
+          <p>「一即一切」を、2項関係しか持てない普通のグラフではなくハイパーグラフで表現する。</p>
+          <span class="status">未着手</span>
+        </div>
+        <div class="card">
+          <h3>インドラの網</h3>
+          <p>メビウス変換・クライン群で、各宝珠が他の全宝珠を映す自己相似ネットを描画する。</p>
+          <span class="status">未着手</span>
+        </div>
+        <div class="card">
+          <h3>持続ホモロジー × 無常</h3>
+          <p>TDA の「特徴が生まれて消える」構造を、諸行無常（anitya）の数理表現として読む。</p>
+          <span class="status">未着手</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>主要な先行研究</h2>
+      <ul class="refs">
+        <li><a href="https://philpapers.org/rec/VENCTA-3">Category Theory and the Ontology of Śūnyatā</a> <span class="who">— Posina &amp; Roy (2024, Brill)</span></li>
+        <li><a href="https://philarchive.org/rec/ARAQRA">Quantum Reality as Indra's Net</a> <span class="who">— Zaghi (2025)</span></li>
+        <li><a href="https://scholarworks.sjsu.edu/comparativephilosophy/vol1/iss2/6/">The Logic of the Catuṣkoṭi</a> <span class="who">— Graham Priest (2010)</span></li>
+        <li><a href="https://arxiv.org/abs/2305.15279">Reformalizing autonomy as closure through category theory</a> <span class="who">— Hirota, Saigo, Taguchi (2023)</span></li>
+        <li><a href="https://arxiv.org/abs/1405.7744">A Note on a Modified Catuskoti</a> <span class="who">— Tetu Makino (2014)</span></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>Status: 足場のみ（2026-05）。アイデアと先行研究の整理段階。<br>
+      ソース・進捗は <a href="https://github.com/hajimedayo328/sunyata-graph">GitHub リポジトリ</a> にて。</p>
+    </footer>
+
+  </div>
+</body>
+</html>
