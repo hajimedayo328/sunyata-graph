@@ -64,6 +64,13 @@
 
   footer { padding: 8vh 0 12vh; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
   footer a { color: var(--accent); text-decoration: none; }
+
+  .proto { margin: 0 0 52px; }
+  .proto img { width: 100%; border: 1px solid var(--line); border-radius: 10px; display: block; }
+  .proto figcaption { font-size: 14.5px; color: var(--muted); margin-top: 14px; line-height: 1.75; }
+  .proto figcaption strong { color: var(--ink); font-size: 17px; font-weight: 500; }
+  .proto figcaption a { color: var(--accent); text-decoration: none; }
+  .proto figcaption a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -115,6 +122,28 @@
         <li><a href="https://arxiv.org/abs/2305.15279">Reformalizing autonomy as closure through category theory</a> <span class="who">— Hirota, Saigo, Taguchi (2023)</span></li>
         <li><a href="https://arxiv.org/abs/1405.7744">A Note on a Modified Catuskoti</a> <span class="who">— Tetu Makino (2014)</span></li>
       </ul>
+    </section>
+
+    <section>
+      <h2>動くプロトタイプ</h2>
+      <figure class="proto">
+        <img src="figs/sunyata_yoneda.png" alt="空 × 米田の補題" />
+        <figcaption><strong>空 × 米田の補題</strong><br>
+          有限圏で各対象の関係プロファイル Hom(−, A) を計算。中身（ラベル）を見ずとも、関係の総体だけで全対象が一意に定まる＝自性なし。米田の補題の計算的な姿。
+          <a href="https://github.com/hajimedayo328/sunyata-graph/blob/main/src/sunyata_yoneda.py">コード →</a></figcaption>
+      </figure>
+      <figure class="proto">
+        <img src="figs/anitya_homology.png" alt="無常 × 持続ホモロジー" />
+        <figcaption><strong>無常 × 持続ホモロジー</strong><br>
+          ノイズで円が崩れるほど、ループ（H1）の寿命 birth→death が 1.38 → 0.80 → 0.47 と縮む。「生まれて消える」構造そのものが無常の像。ただし中身は純粋な TDA で、仏教は解釈・動機の層。
+          <a href="https://github.com/hajimedayo328/sunyata-graph/blob/main/src/anitya_homology.py">コード →</a></figcaption>
+      </figure>
+      <figure class="proto">
+        <img src="figs/engi_markov.png" alt="縁起 × do-calculus" />
+        <figcaption><strong>縁起 × do-calculus</strong><br>
+          十二支DAGで <code>do(無明=0)</code> ＝ 断無明。介入で下流の苦が消える。「苦の総量」で測ると根本（無明）を断つほど効果が大きく、八正道が無明を標的にする理由が数値で出る。土台は Yin &amp; Zhang (2022)。
+          <a href="https://github.com/hajimedayo328/sunyata-graph/blob/main/src/engi_markov.py">コード →</a></figcaption>
+      </figure>
     </section>
 
     <section>

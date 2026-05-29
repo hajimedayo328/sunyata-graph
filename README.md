@@ -5,7 +5,18 @@
 仏教（特に禅・中観・華厳）の存在論を、データ可視化と数学的形式化の両面から扱う。
 理論だけで止まっている既存研究に対して、「経典データを取り込み → グラフで可視化 → 圏論で形式化」の3点セットで踏み込むのが狙い。
 
-> ⚠️ Status: **足場のみ（2026-05）**。まだ何も実装していない。アイデアと先行研究の整理段階。
+> Status: **最小プロトタイプ3本が動作（2026-05）**。空×米田 / 無常×持続ホモロジー / 縁起×do-calculus。
+> サイト → https://hajimedayo328.github.io/sunyata-graph/ ／ コードは `src/`、図は `docs/figs/`。
+
+## 動かし方
+
+```bash
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install numpy networkx matplotlib scipy ripser
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/sunyata_yoneda.py   # 空×米田
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/anitya_homology.py  # 無常×持続ホモロジー
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/engi_markov.py      # 縁起×do-calculus
+```
 
 ---
 
@@ -19,10 +30,11 @@
 
 | テーマ | 内容 | 状態 |
 |---|---|---|
-| 十二縁起の因果DAG | 無明→…→老死 を有向グラフ化、do-calculus で介入シミュレート | 未着手 |
+| 空 × 米田の補題 | 対象＝関係の総体 Hom(−,A) を有限圏で計算・可視化 | ✅ プロトタイプ |
+| 十二縁起の因果DAG | 無明→…→老死を有向グラフ化、do-calculus で介入シミュレート | ✅ プロトタイプ |
+| 持続ホモロジー × 無常 | TDAの「特徴が生まれて消える」構造を anitya と対応 | ✅ プロトタイプ |
 | 華厳「事事無礙法界」 | 「一即一切」をハイパーグラフ（ハイパーエッジ）で表現 | 未着手 |
 | インドラの網 | メビウス変換・クライン群で自己相似ネットを描画 | 未着手 |
-| 持続ホモロジー × 無常 | TDAの「特徴が生まれて消える」構造を anitya と対応 | 未着手 |
 | 公案の論理構造 | 四句分別を矛盾許容論理＋グラフで可視化 | 未着手 |
 
 ## 構成
