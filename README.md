@@ -16,6 +16,7 @@ python -m venv .venv
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/sunyata_yoneda.py   # 空×米田
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/anitya_homology.py  # 無常×持続ホモロジー
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/engi_markov.py      # 縁起×do-calculus
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/symmetry_breaking.py # 無分別×対称性の破れ
 ```
 
 ---
@@ -31,6 +32,7 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/engi_markov.py      # 縁起
 | テーマ | 内容 | 状態 |
 |---|---|---|
 | 空 × 米田の補題 | 対象＝関係の総体 Hom(−,A) を有限圏で計算・可視化 | ✅ プロトタイプ |
+| 無分別 × 対称性の破れ | 頂点推移グラフ→エッジ追加で軌道分裂（automorphic equivalence）。優劣の発生を可視化 | ✅ プロトタイプ |
 | 十二縁起の因果DAG | 無明→…→老死を有向グラフ化、do-calculus で介入シミュレート | ✅ プロトタイプ |
 | 持続ホモロジー × 無常 | TDAの「特徴が生まれて消える」構造を anitya と対応 | ✅ プロトタイプ |
 | 華厳「事事無礙法界」 | 「一即一切」をハイパーグラフ（ハイパーエッジ）で表現 | 未着手 |
