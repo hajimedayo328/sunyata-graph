@@ -19,6 +19,8 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/engi_markov.py      # 縁起
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/symmetry_breaking.py # 無分別×対称性の破れ
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/mufunbetsu_index.py  # 無分別度の指標化
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/mufunbetsu_compare.py # 無分別度の2つの測り方
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/anitya_symmetry.py   # 無常×無分別（掛け算①）
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/market_mufunbetsu.py # 市場×無分別（掛け算②）
 ```
 
 ---
