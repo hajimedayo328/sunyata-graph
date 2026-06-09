@@ -18,6 +18,7 @@ PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/anitya_homology.py  # 無常
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/engi_markov.py      # 縁起×do-calculus
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/symmetry_breaking.py # 無分別×対称性の破れ
 PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/mufunbetsu_index.py  # 無分別度の指標化
+PYTHONIOENCODING=utf-8 .venv/Scripts/python.exe src/mufunbetsu_compare.py # 無分別度の2つの測り方
 ```
 
 ---
